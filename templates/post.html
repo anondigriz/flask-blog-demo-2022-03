@@ -4,4 +4,7 @@
     <h2>{% block title %} {{ post['title'] }} {% endblock %}</h2>
     <span class="badge badge-primary">{{ post['created'] }}</span>
     <p>{{ post['content'] }}</p>
+    <a href="{{ url_for('edit', id=post['id']) }}">
+        <span class="btn btn-primary">Edit</span>
+    </a>
 {% endblock %}
